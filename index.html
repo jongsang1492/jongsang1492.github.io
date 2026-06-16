@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Yoo | Mechanical Engineering Portfolio</title>
+  <meta name="description" content="Daniel Yoo — Mechanical Engineering student at the University of Toronto focused on product design, mechatronics, manufacturing, CAD, ROS, and data-driven engineering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="nav">
+    <a class="brand" href="#home">Daniel</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero section">
+      <div class="profile-card reveal">
+        <div class="avatar-wrap">
+          <div class="avatar">DY</div>
+          <span class="orbit orbit-one"></span>
+          <span class="orbit orbit-two"></span>
+        </div>
+        <div class="info-grid">
+          <span>Year</span><strong>Mechanical Engineering</strong>
+          <span>Program</span><strong>UofT B.A.Sc.</strong>
+          <span>Focus</span><strong>Design • Mechatronics • Manufacturing</strong>
+          <span>Based</span><strong>Toronto, ON</strong>
+          <span>Email</span><strong>jongsang.yoo@mail.utoronto.ca</strong>
+        </div>
+      </div>
+
+      <div class="hero-copy reveal delay-1">
+        <p class="eyebrow">Mechanical Engineering Portfolio</p>
+        <h1>Hi, I’m <span>Daniel Yoo</span>.</h1>
+        <p class="lead">I turn engineering concepts into practical, manufacturable systems through CAD design, prototyping, simulation, and data-driven analysis.</p>
+        <div class="code-card" aria-label="Engineering keywords">
+          <p><span>tools</span> = ["SolidWorks", "ANSYS", "Python", "ROS", "MATLAB"]</p>
+          <p><span>focus</span> = "product design + mechatronics + automation"</p>
+        </div>
+        <div class="hero-actions">
+          <a class="button primary" href="Daniel_Yoo_Resume.pdf" target="_blank">Download Resume</a>
+          <a class="button" href="https://github.com/jongsang1492" target="_blank">GitHub</a>
+          <a class="button" href="https://www.linkedin.com/in/daniel-yoo-1a7788227/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section two-col">
+      <div class="section-title reveal">
+        <p class="eyebrow">About</p>
+        <h2>Design-focused mechanical engineer in training.</h2>
+      </div>
+      <div class="content-card reveal delay-1">
+        <p>I’m a Mechanical Engineering student at the University of Toronto specializing in mechatronics and energy. My strongest interests are mechanical design, CAD, manufacturing, robotics, and practical engineering systems that can move from concept to prototype.</p>
+        <div class="pill-row">
+          <span>CSWA Certified</span><span>CAD Design</span><span>Manufacturing</span><span>Robotics</span><span>Data Analysis</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="highlights" class="section stats reveal">
+      <article><strong>100k+</strong><span>hourly electricity records analyzed</span></article>
+      <article><strong>100+</strong><span>SolidWorks components in PnP assembly</span></article>
+      <article><strong>40%</strong><span>manual processing time reduced with Excel/VBA</span></article>
+      <article><strong>60+</strong><span>students supported through engineering workshops</span></article>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Featured Projects</p>
+        <h2>Engineering work that shows design, analysis, and implementation.</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="project-visual mech">CAD</div>
+          <p class="project-kicker">SolidWorks • Mechanical Design • BOM</p>
+          <h3>PCB Pick-and-Place Machine</h3>
+          <p>Designed a 600-mm desktop pick-and-place machine with a rack-and-pinion Z-axis and belt-driven X–Y gantry. Built 100+ component assembly, manufacturing drawings, and BOM documentation.</p>
+          <div class="tag-row"><span>SolidWorks</span><span>Manufacturing</span><span>Tolerance Analysis</span></div>
+          <a href="https://github.com/jongsang1492/pcb-pick-place-machine" target="_blank">View repository →</a>
+        </article>
+
+        <article class="project-card reveal delay-1">
+          <div class="project-visual data">MW</div>
+          <p class="project-kicker">Python • SQL • Tableau</p>
+          <h3>Electricity Demand Analysis</h3>
+          <p>Processed 100,000+ hourly records to identify demand patterns across hourly, monthly, and weekday dimensions, including peak periods around 53,000 MW.</p>
+          <div class="tag-row"><span>Python</span><span>SQL</span><span>Tableau</span></div>
+          <a href="https://github.com/jongsang1492" target="_blank">View GitHub →</a>
+        </article>
+
+        <article class="project-card reveal delay-2">
+          <div class="project-visual robot">ROS</div>
+          <p class="project-kicker">ROS Noetic • MoveIt • Python</p>
+          <h3>ROS-Based Robotic Manipulation</h3>
+          <p>Built ROS nodes and control scripts for robotic manipulation using topics, services, actions, robot state monitoring, and trajectory planning in simulation.</p>
+          <div class="tag-row"><span>ROS1</span><span>MoveIt</span><span>RViz</span></div>
+          <a href="https://github.com/jongsang1492/ros_ur10e_pick_place_test" target="_blank">View repository →</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-visual circuit">PCB</div>
+          <p class="project-kicker">LTspice • Eagle • Analog Hardware</p>
+          <h3>Current-Sensing Amplifier PCB</h3>
+          <p>Designed an LM324-based signal conditioning circuit to convert a low sensor output into an ADC-compatible signal with active filtering for noise reduction.</p>
+          <div class="tag-row"><span>LM324</span><span>Eagle</span><span>LTspice</span></div>
+          <a href="https://github.com/jongsang1492/Current-Sensing-Amplifier-Custom-PCB-" target="_blank">View repository →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Skills</p>
+        <h2>Tools I use to design, analyze, and communicate engineering work.</h2>
+      </div>
+      <div class="skill-grid">
+        <article class="skill-card reveal"><h3>Mechanical Design</h3><p>CAD modeling, assemblies, engineering drawings, tolerance analysis, prototyping.</p><div><span>SolidWorks</span><span>ANSYS</span><span>CSWA</span></div></article>
+        <article class="skill-card reveal delay-1"><h3>Robotics & Programming</h3><p>Python automation, ROS nodes, simulation, motion planning, structured debugging.</p><div><span>Python</span><span>ROS1</span><span>MoveIt</span><span>Git</span></div></article>
+        <article class="skill-card reveal delay-2"><h3>Data & Analysis</h3><p>Structured data processing, dashboards, validation, technical documentation.</p><div><span>SQL</span><span>Tableau</span><span>Excel</span><span>MATLAB</span></div></article>
+        <article class="skill-card reveal"><h3>Electronics</h3><p>Circuit simulation, PCB design basics, analog signal conditioning, documentation.</p><div><span>LTspice</span><span>Eagle</span><span>PCB</span></div></article>
+      </div>
+    </section>
+
+    <section id="experience" class="section timeline-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Experience</p>
+        <h2>Leadership and technical experience.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><span>May 2025 — Present</span><h3>Engineering Workshop Lead</h3><p>Engineers Without Borders, UofT — led 6+ workshops for 60+ students, created technical worksheets, and managed materials and budgets using Excel.</p></article>
+        <article class="timeline-item reveal delay-1"><span>Nov 2023 — May 2025</span><h3>Fire Direction Center Specialist</h3><p>Republic of Korea Army — built Excel/VBA automation, validated 100+ operation entries, and supported time-critical system-level calculations.</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Let’s build something practical.</h2>
+      <p>Open to mechanical design, manufacturing, mechatronics, robotics, and engineering analysis opportunities.</p>
+      <div class="hero-actions center">
+        <a class="button primary" href="mailto:jongsang.yoo@mail.utoronto.ca">Email me</a>
+        <a class="button" href="Daniel_Yoo_Resume.pdf" target="_blank">Resume</a>
+        <a class="button" href="https://github.com/jongsang1492" target="_blank">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Daniel Yoo. Built for engineering portfolio use.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
