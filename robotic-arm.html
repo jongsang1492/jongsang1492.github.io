@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robotic Arm Design and Analysis | Daniel Yoo</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css"></head><body>
+<header class="nav">
+  <a class="brand" href="../index.html">Daniel Yoo</a>
+  <nav>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#projects">Projects</a>
+    <a href="../index.html#skills">Skills</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../Daniel_Yoo_Resume.pdf">Resume</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+</header>
+<main class="project-page">
+<section class="project-hero">
+  <div>
+    <a class="back" href="../index.html#projects">← Back to projects</a>
+    <p class="eyebrow">SolidWorks • Simulation • Ongoing Project</p>
+    <h1>Robotic Arm Design and Analysis</h1>
+    <p>Ongoing mechanical design and structural analysis project for a 3-DOF robotic arm and gripper system. The project focuses on CAD assembly, joint design, material selection, and SolidWorks Simulation validation under external loading.</p>
+    <div class="tag-row"><span>Started Apr 2026</span><span>Currently in development</span><span>SolidWorks</span><span>FEA</span><span>Mechanical Design</span></div>
+  </div>
+  <img src="../assets/projects/robotic-arm/assembly.png" alt="Robotic arm SolidWorks assembly">
+</section>
+
+<section class="section two-col">
+  <div><p class="eyebrow">Project Overview</p><h2>Designing the arm first, then using simulation to expose weak points.</h2></div>
+  <div>
+    <p>This project focuses on the mechanical design and structural analysis of a 3-DOF robotic arm and gripper system using SolidWorks and SolidWorks Simulation. The goal is to evaluate whether the arm links can support external loads and to identify stress-critical regions before physical manufacturing.</p>
+    <p>The current version includes a complete CAD assembly, link-level static structural simulations, and early design validation. The project is still being developed with future improvements planned for dynamic motion, motor integration, and physical prototyping.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title"><div><p class="eyebrow">Design Objectives</p><h2>What this project is built to demonstrate</h2></div></div>
+  <div class="contrib-grid">
+    <div><h3>CAD Assembly</h3><p>Designed a multi-link robotic arm assembly with base, joints, arm links, and gripper mechanism in SolidWorks.</p></div>
+    <div><h3>Joint & Motion Layout</h3><p>Created mechanically constrained joints and link connections with assembly simplicity and future actuation in mind.</p></div>
+    <div><h3>Structural Validation</h3><p>Used SolidWorks Simulation to evaluate critical arm components under applied torque loading.</p></div>
+    <div><h3>Design Iteration</h3><p>Identified stress concentrations and used FEA results to guide future material, thickness, and geometry improvements.</p></div>
+  </div>
+</section>
+
+<section class="section feature">
+  <div>
+    <p class="eyebrow">Mechanical Design</p>
+    <h2>3-DOF arm with gripper and base-mounted assembly.</h2>
+    <p>The robotic arm consists of multiple interconnected links and a gripper mechanism. The design was developed with manufacturability, assembly simplicity, and structural performance in mind.</p>
+    <ul>
+      <li>Joint connectivity and motion constraints</li>
+      <li>Structural stability under loading</li>
+      <li>Manufacturability of individual components</li>
+      <li>Weight and material selection</li>
+      <li>Ease of assembly and future actuator integration</li>
+    </ul>
+  </div>
+  <img src="../assets/projects/robotic-arm/assembly.png" alt="Complete robotic arm assembly designed in SolidWorks">
+</section>
+
+<section class="section">
+  <div class="section-title"><div><p class="eyebrow">FEA Setup</p><h2>Static structural analysis of critical links</h2></div></div>
+  <div class="spec-grid">
+    <div><strong>Material</strong><span>Aluminum 1060 used for the current simulation baseline</span></div>
+    <div><strong>Applied Loading</strong><span>1.6 N·m torque used to represent an estimated 1 kg payload case at arm reach</span></div>
+    <div><strong>Tool</strong><span>SolidWorks Simulation static structural FEA</span></div>
+    <div><strong>Purpose</strong><span>Find stress concentrations, compare peak stress to yield strength, and guide redesign decisions</span></div>
+  </div>
+</section>
+
+<section class="section feature">
+  <div>
+    <p class="eyebrow">Link 1 Analysis</p>
+    <h2>Stress slightly exceeded yield under the tested load case.</h2>
+    <p>Link 1 was evaluated under a 1.6 N·m applied torque. The maximum von Mises stress reached 28.86 MPa compared with a 27.57 MPa yield strength, giving an estimated factor of safety of 0.96.</p>
+    <ul>
+      <li>Maximum von Mises Stress: 28.86 MPa</li>
+      <li>Yield Strength: 27.57 MPa</li>
+      <li>Estimated Factor of Safety: 0.96</li>
+      <li>Result: requires geometry/material optimization before manufacturing</li>
+    </ul>
+  </div>
+  <img src="../assets/projects/robotic-arm/link1-fea.png" alt="Link 1 von Mises stress simulation">
+</section>
+
+<section class="section feature">
+  <img src="../assets/projects/robotic-arm/link3-fea.png" alt="Link 3 von Mises stress simulation">
+  <div>
+    <p class="eyebrow">Link 3 Analysis</p>
+    <h2>Stress remained below yield for the current simulation condition.</h2>
+    <p>Link 3 was also evaluated under a 1.6 N·m applied torque. The peak von Mises stress reached 25.01 MPa, remaining below the 27.57 MPa yield strength with an estimated factor of safety of 1.10.</p>
+    <ul>
+      <li>Maximum von Mises Stress: 25.01 MPa</li>
+      <li>Yield Strength: 27.57 MPa</li>
+      <li>Estimated Factor of Safety: 1.10</li>
+      <li>Result: passes the current static load case, but still marked for future reinforcement review</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title"><div><p class="eyebrow">Engineering Evaluation</p><h2>Simulation-driven design decisions</h2></div></div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Component</th><th>Load Case</th><th>Max Stress</th><th>Yield Strength</th><th>FOS</th><th>Engineering Interpretation</th></tr></thead>
+    <tbody>
+      <tr><td>Link 1</td><td>1.6 N·m applied torque</td><td>28.86 MPa</td><td>27.57 MPa</td><td>0.96</td><td>Stress slightly exceeds yield; redesign needed around joint connection and load-transfer features.</td></tr>
+      <tr><td>Link 3</td><td>1.6 N·m applied torque</td><td>25.01 MPa</td><td>27.57 MPa</td><td>1.10</td><td>Stress remains below yield; future work will still review geometry for robustness and repeated loading.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="section">
+  <div class="section-title"><div><p class="eyebrow">Skills Demonstrated</p><h2>Mechanical design workflow</h2></div></div>
+  <div class="skill-grid">
+    <div><h3>CAD Design</h3><p>SolidWorks part modeling, assembly creation, joints, base design, link layout, and gripper integration.</p></div>
+    <div><h3>FEA</h3><p>Static structural simulation, material assignment, applied torque loading, boundary conditions, and stress interpretation.</p></div>
+    <div><h3>Design Optimization</h3><p>Used simulation results to identify weak points and plan geometry/material improvements before fabrication.</p></div>
+    <div><h3>Engineering Judgment</h3><p>Compared von Mises stress against yield strength and evaluated factor of safety to assess design readiness.</p></div>
+  </div>
+</section>
+
+<section class="section two-col">
+  <div><p class="eyebrow">Future Development</p><h2>This project is still being improved.</h2></div>
+  <div>
+    <p>Next steps include dynamic motion analysis, weight optimization, manufacturing drawings, physical prototype fabrication, motor and actuator integration, and motion planning/control implementation.</p>
+    <p>The current focus is to strengthen the link geometry, improve the factor of safety for critical components, and prepare the design for a more realistic actuator-driven version.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title"><div><p class="eyebrow">Gallery</p><h2>CAD and simulation visuals</h2></div></div>
+  <div class="gallery">
+    <figure class="gallery-item reveal"><img src="../assets/projects/robotic-arm/assembly.png" alt="Final robotic arm assembly"><figcaption>Complete robotic arm assembly designed in SolidWorks</figcaption></figure>
+    <figure class="gallery-item reveal"><img src="../assets/projects/robotic-arm/link1-fea.png" alt="Link 1 FEA"><figcaption>Link 1 stress distribution — peak stress slightly exceeded yield</figcaption></figure>
+    <figure class="gallery-item reveal"><img src="../assets/projects/robotic-arm/link3-fea.png" alt="Link 3 FEA"><figcaption>Link 3 stress distribution — stress remained below yield</figcaption></figure>
+  </div>
+</section>
+</main><script src="../assets/js/script.js"></script></body></html>

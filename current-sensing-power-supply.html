@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Current-Sensing Power Supply | Daniel Yoo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css"></head><body>
+<header class="nav"><a class="brand" href="../index.html">Daniel Yoo</a><nav>
+<a href="../index.html#about">About</a><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#experience">Experience</a><a href="../Daniel_Yoo_Resume.pdf">Resume</a><a href="../index.html#contact">Contact</a>
+</nav></header>
+<main class="project-page">
+<section class="project-hero">
+  <div><a class="back" href="../index.html#projects">← Back to projects</a><p class="eyebrow">Analog PCB • Power Electronics • Hardware Validation</p>
+  <h1>Custom Current-Sensing Power Supply</h1>
+  <p>Designed, fabricated, soldered, and validated a custom current-sense PCB for a programmable DC power supply. The project combined LM324-based analog signal conditioning, two-layer PCB layout in Autodesk Eagle, through-hole assembly, measurement validation, and integration with an LCD-based embedded power supply platform.</p>
+  <div class="tag-row"><span>Autodesk Eagle</span><span>LM324N</span><span>Soldering</span><span>PCB Layout</span><span>ADC Calibration</span><span>Hardware Testing</span></div>
+  </div><img src="../assets/projects/current-sensing-power-supply/cover.png" alt="Working programmable power supply with LCD interface">
+</section>
+
+<section class="section">
+  <div class="section-title"><div><p class="eyebrow">System Context</p><h2>Programmable DC power supply integration</h2></div></div>
+  <div class="feature">
+    <div><p>The current-sense PCB converts the voltage across a low-value current-sense resistor into a microcontroller-readable signal. It sits inside a larger programmable power supply system with a laptop adapter input, switching regulator, microcontroller, LCD/pushbutton interface, and output terminals.</p>
+    <div class="spec-grid" style="grid-template-columns:repeat(2,1fr);margin-top:22px">
+      <div><strong>Power input</strong><span>19 V, 3.42 A max</span></div><div><strong>Output range</strong><span>0–15 V, 0–3 A current-limited</span></div>
+      <div><strong>Sense resistor</strong><span>0.1 Ω current-sense resistor</span></div><div><strong>ADC interface</strong><span>0.25–3.3 V signal range</span></div>
+    </div></div>
+    <img src="../assets/projects/current-sensing-power-supply/system-overview.png" alt="Power supply system overview diagram">
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title"><div><p class="eyebrow">My Contribution</p><h2>What I worked on</h2></div></div>
+  <div class="contrib-grid">
+    <div><h3>Analog circuit design</h3><p>Built an LM324N-based current-sense amplifier and active filtering circuit to condition the measured current signal for the embedded controller.</p></div>
+    <div><h3>PCB layout</h3><p>Created a compact two-layer PCB in Autodesk Eagle, routing top and bottom copper layers around the LM324N, feedback networks, connector header, and through-hole components.</p></div>
+    <div><h3>Assembly & soldering</h3><p>Populated and soldered the fabricated PCB, mounted it to the power supply board, and integrated the hardware with the main LCD/user-interface assembly.</p></div>
+    <div><h3>Testing & validation</h3><p>Measured VOUT1 and VOUT2 across the tested current range, plotted ADC trends, and validated that both filtered and unfiltered outputs followed a clean increasing response.</p></div>
+  </div>
+</section>
+
+<section class="section feature">
+  <div><p class="eyebrow">Circuit Architecture</p><h2>LM324N signal conditioning and filter stages</h2>
+  <p>The schematic uses an LM324N quad op-amp package to condition the ISENSE signal. The design includes an input current-sense stage, amplification and biasing around VOUT1, additional active low-pass filtering, and a connector interface for VCC, ISENSE, VOUT1, VOUT2, and GND.</p>
+  <ul><li>Current-sense input routed from ISENSE and 0.1 Ω sense resistor path</li><li>LM324N stages used for analog amplification, buffering, and filtering</li><li>VOUT1 and VOUT2 separated for unfiltered and filtered measurements</li><li>JP1 header exposes power, signal, and ground connections for integration</li></ul></div>
+  <img src="../assets/projects/current-sensing-power-supply/circuit-schematic.png" alt="LM324 current-sense amplifier schematic">
+</section>
+
+<section class="section">
+  <div class="section-title"><div><p class="eyebrow">PCB Layout</p><h2>Two-layer Eagle board design</h2></div></div>
+  <div class="gallery">
+    <figure class="gallery-item reveal"><img src="../assets/projects/current-sensing-power-supply/eagle-combined.png" alt="Combined Eagle PCB layout"><figcaption>Combined top/bottom routing view</figcaption></figure>
+    <figure class="gallery-item reveal"><img src="../assets/projects/current-sensing-power-supply/eagle-top.png" alt="Eagle top layer PCB layout"><figcaption>Top copper layer and component placement</figcaption></figure>
+    <figure class="gallery-item reveal"><img src="../assets/projects/current-sensing-power-supply/eagle-bottom.png" alt="Eagle bottom layer PCB layout"><figcaption>Bottom copper routing layer</figcaption></figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title"><div><p class="eyebrow">Experimental Validation</p><h2>Measured current-sense response</h2></div></div>
+  <p>The measured VOUT1 and VOUT2 values increased consistently as ISENSE increased. The filtered and unfiltered response were both captured and compared using the same tested current points shown below.</p>
+  <div class="table-wrap"><table><thead><tr><th>I sense</th><th>V out 1 (V)</th><th>V out 2 (V)</th><th>V out 1 (mV)</th><th>V out 2 (mV)</th></tr></thead><tbody>
+<tr><td>0.01</td><td>0.298</td><td>0.329</td><td>298</td><td>329</td></tr>
+<tr><td>0.02</td><td>0.307</td><td>0.338</td><td>307</td><td>338</td></tr>
+<tr><td>0.03</td><td>0.316</td><td>0.349</td><td>316</td><td>349</td></tr>
+<tr><td>0.05</td><td>0.334</td><td>0.369</td><td>334</td><td>369</td></tr>
+<tr><td>0.10</td><td>0.378</td><td>0.416</td><td>378</td><td>416</td></tr>
+<tr><td>0.15</td><td>0.423</td><td>0.466</td><td>423</td><td>466</td></tr>
+<tr><td>0.20</td><td>0.468</td><td>0.515</td><td>468</td><td>515</td></tr>
+<tr><td>0.30</td><td>0.555</td><td>0.615</td><td>555</td><td>615</td></tr>
+<tr><td>0.40</td><td>0.649</td><td>0.710</td><td>649</td><td>710</td></tr>
+<tr><td>0.50</td><td>0.738</td><td>0.803</td><td>738</td><td>803</td></tr>
+<tr><td>1.00</td><td>1.185</td><td>1.274</td><td>1185</td><td>1274</td></tr>
+<tr><td>2.00</td><td>2.020</td><td>2.325</td><td>2020</td><td>2325</td></tr>
+<tr><td>2.50</td><td>2.530</td><td>2.780</td><td>2530</td><td>2780</td></tr>
+<tr><td>3.00</td><td>2.970</td><td>3.200</td><td>2970</td><td>3200</td></tr>
+  </tbody></table></div>
+</section>
+
+<section class="section">
+  <div class="section-title"><div><p class="eyebrow">Calibration Graphs</p><h2>Filtered and unfiltered ADC trends</h2></div></div>
+  <div class="gallery">
+    <figure class="gallery-item reveal"><img src="../assets/projects/current-sensing-power-supply/graph-unfiltered.png" alt="Unfiltered ISENSE versus ADC value graph"><figcaption>Unfiltered ISENSE vs ADC Value</figcaption></figure>
+    <figure class="gallery-item reveal"><img src="../assets/projects/current-sensing-power-supply/graph-filtered.png" alt="Filtered ISENSE versus ADC value graph"><figcaption>Filtered ISENSE vs ADC Value</figcaption></figure>
+    <figure class="gallery-item reveal"><img src="../assets/projects/current-sensing-power-supply/measured-table.png" alt="Measured current-sense data table"><figcaption>Measured VOUT1/VOUT2 data table</figcaption></figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title"><div><p class="eyebrow">Hardware Build</p><h2>Fabricated PCB, soldering, and final integration</h2></div></div>
+  <div class="gallery">
+    <figure class="gallery-item reveal"><img src="../assets/projects/current-sensing-power-supply/pcb-top.jpg" alt="Custom current-sense PCB top side"><figcaption>Custom current-sense PCB — component side</figcaption></figure>
+    <figure class="gallery-item reveal"><img src="../assets/projects/current-sensing-power-supply/pcb-bottom.jpg" alt="Custom current-sense PCB bottom side"><figcaption>Custom current-sense PCB — solder side</figcaption></figure>
+    <figure class="gallery-item reveal"><img src="../assets/projects/current-sensing-power-supply/main-board-top.jpg" alt="Main board top side"><figcaption>Main power supply board — LCD and controls</figcaption></figure>
+    <figure class="gallery-item reveal"><img src="../assets/projects/current-sensing-power-supply/main-board-back.jpg" alt="Main board back side"><figcaption>Current-sense PCB mounted to main board</figcaption></figure>
+    <figure class="gallery-item reveal"><img src="../assets/projects/current-sensing-power-supply/working-lcd.png" alt="LCD working power supply"><figcaption>Working LCD UI during power supply test</figcaption></figure>
+    <figure class="gallery-item reveal"><img src="../assets/projects/current-sensing-power-supply/cover.png" alt="Final integrated current-sensing power supply"><figcaption>Final integrated programmable power supply</figcaption></figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title"><div><p class="eyebrow">Skills Used</p><h2>Technical skills demonstrated</h2></div></div>
+  <div class="skill-grid">
+    <div><h3>Analog Electronics</h3><p>LM324N op-amp circuits, signal conditioning, low-pass filtering, current sensing</p></div>
+    <div><h3>PCB Design</h3><p>Autodesk Eagle, two-layer board routing, Gerber generation, connector layout</p></div>
+    <div><h3>Hardware Assembly</h3><p>Soldering, through-hole components, board integration, harness/header connection</p></div>
+    <div><h3>Validation</h3><p>Bench testing, VOUT measurement, ADC trend analysis, LCD-based system verification</p></div>
+  </div>
+</section>
+</main><script src="../assets/js/script.js"></script></body></html>

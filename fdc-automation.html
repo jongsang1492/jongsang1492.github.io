@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FDC Calculation Automation Tool</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/style.css"></head><body><div class="float-gear"></div><header class="nav"><div class="nav-inner"><a class="brand" href="../index.html">Daniel<span>Yoo</span></a><nav><a href="../index.html#about">About</a><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#experience">Experience</a><a href="../Daniel_Yoo_Resume.pdf">Resume</a><a href="../index.html#contact">Contact</a></nav></div></header><main><section class="page-hero reveal"><p class="eyebrow">Excel VBA • Process Automation • Technical Operations</p><h1>FDC Calculation Automation Tool</h1><p class="lead">A sanitized automation case study based on repetitive coordinate-processing work from a time-critical technical operations environment. This page focuses on workflow modeling, Excel interface design, and VBA automation while omitting operationally sensitive details.</p><div class="actions"><a class="btn" href="../index.html#projects">← All projects</a><a class="btn primary" href="../Daniel_Yoo_Resume.pdf">Resume</a></div></section><div class="hero-img reveal"><img src="../assets/projects/fdc/excel-tool.png" alt="FDC Calculation Automation Tool"></div>
+<section class="case-section case-grid"><div class="case-card reveal"><h2>Overview</h2><p>During military service, I noticed a repeated manual calculation workflow that required careful coordinate input, visual reading, and repeated verification. I converted the repeatable parts of the workflow into a simple Excel-based tool to improve consistency and reduce manual effort during training documentation.</p></div><div class="case-card reveal"><h2>My Contribution</h2><ul><li>Mapped the manual workflow into input, calculation, and output steps.</li><li>Built a small Excel interface for coordinate-style inputs and computed outputs.</li><li>Implemented VBA logic behind a single button-driven workflow.</li><li>Focused on repeatability, error reduction, and clear output formatting.</li></ul></div></section>
+<section class="case-section"><div class="section-title"><p class="eyebrow">Implementation</p><h2>Sanitized VBA structure</h2></div><div class="case-card reveal"><p>The public portfolio version keeps the VBA structure and automation approach visible, but intentionally removes operational formulas and sensitive calculation details.</p><pre class="code-block"><code>Sub CalculateFDC()
+
+    Dim X As Double
+    Dim Y As Double
+    Dim OutputA As Double
+    Dim OutputB As Double
+
+    X = Range("B4").Value
+    Y = Range("B5").Value
+
+    ' Calculation model intentionally omitted
+    ' in the public portfolio version.
+
+    OutputA = CalculateOutputA(X, Y)
+    OutputB = CalculateOutputB(X, Y)
+
+    Range("B8").Value = OutputA
+    Range("B9").Value = OutputB
+
+End Sub</code></pre></div></section>
+<section class="case-section"><div class="section-title"><p class="eyebrow">Gallery</p><h2>Manual-to-digital workflow</h2></div><div class="gallery"><figure class="reveal"><img src="../assets/projects/fdc/excel-tool.png" alt="Excel VBA calculation interface"><figcaption>Excel VBA calculation interface</figcaption></figure><figure class="reveal"><img src="../assets/projects/fdc/plotting-board.png" alt="Manual plotting-board reference"><figcaption>Manual plotting-board reference</figcaption></figure><figure class="reveal"><img src="../assets/projects/fdc/manual-reading.png" alt="Example of visual reading from manual workflow"><figcaption>Example of visual reading from manual workflow</figcaption></figure></div></section>
+<section class="case-section case-grid"><div class="case-card reveal"><h2>Before</h2><ul><li>Repeated manual interpretation steps</li><li>Visual reading and transcription required</li><li>Higher chance of inconsistent outputs</li><li>More effort needed during repeated training workflows</li></ul></div><div class="case-card reveal"><h2>After</h2><ul><li>Inputs entered directly into Excel</li><li>Button-driven VBA calculation workflow</li><li>Consistent output formatting</li><li>Reduced repeated manual effort</li></ul></div></section>
+<section class="case-section"><div class="case-card reveal"><h2>Skills Demonstrated</h2><p>Excel VBA, workflow automation, mathematical modeling, user-interface simplification, process improvement, data verification, operational discipline, and technical documentation.</p></div></section></main><div class="lightbox"><button>Close</button><img alt="expanded project image"></div><script src="../assets/js/script.js"></script></body></html>

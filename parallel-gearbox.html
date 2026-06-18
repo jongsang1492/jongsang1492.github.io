@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parallel Gearbox Design & Assembly</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css"></head><body>
+<header class="nav">
+  <a class="brand" href="../index.html">Daniel Yoo</a>
+  <nav>
+    <a href="../index.html#about">About</a><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#experience">Experience</a><a href="../Daniel_Yoo_Resume.pdf">Resume</a><a href="../index.html#contact">Contact</a>
+  </nav>
+</header>
+<main class="project-page">
+<section class="project-hero">
+  <div><a class="back" href="../index.html#projects">← Back to projects</a><p class="eyebrow">SolidWorks • 3D Printing • Gear Train Design</p><h1>Parallel Gearbox Design & Assembly</h1><p>Designed and fabricated a compact two-stage parallel-axis gearbox using SolidWorks and 3D printing. The system uses two 4:1 spur-gear stages to achieve a total 16:1 speed reduction while keeping the frame simple, modular, and easy to assemble.</p><div class="tag-row"><span>16:1 Speed Reduction</span><span>Two 4:1 Spur-Gear Stages</span><span>3D Printed Prototype</span><span>Assembly Instructions</span></div></div>
+  <img src="../assets/projects/parallel-gearbox/cover.png" alt="3D printed parallel gearbox prototype">
+</section>
+
+<section class="stats reveal"><div><strong>16:1</strong><span>Total speed reduction</span></div><div><strong>2</strong><span>Parallel spur-gear stages</span></div><div><strong>7</strong><span>Main printed components</span></div><div><strong>CAD → Print</strong><span>Designed, documented, assembled</span></div></section>
+
+<section class="section two-col"><div><p class="eyebrow">Project Overview</p><h2>Compact gearbox built around simplicity, modularity, and manufacturability.</h2></div><div><p>This project focused on designing a small 3D-printable gearbox that could transfer motion through parallel axes while reducing output speed. The design uses a single-piece frame, two large gears, two small gears, one large shaft, and two small shafts.</p><p>The main engineering goal was to reduce print and assembly risk. Instead of overcomplicating the housing with dovetails, pins, or multi-part supports, the gearbox frame was designed as a single rigid structure with pre-made shaft holes and open top/bottom sections to reduce print time.</p></div></section>
+
+<section class="section feature"><div><p class="eyebrow">Design Rationale</p><h2>Why this gearbox architecture?</h2><ul><li>Selected spur gears because they are simple, efficient for parallel-axis power transmission, and easier to 3D print than helical or planetary gears.</li><li>Used two identical 4:1 reduction stages to reach a 16:1 total ratio while keeping the design understandable and replaceable.</li><li>Designed a single-piece frame for stronger structure and fewer assembly interfaces.</li><li>Used hexagonal shaft sections where gears attach to reduce slipping under torque.</li><li>Kept circular shaft sections at housing contact areas to support smoother rotation.</li></ul></div><img src="../assets/projects/parallel-gearbox/solidworks-iso.png" alt="SolidWorks isometric view of parallel gearbox"></section>
+
+<section class="section"><div class="section-title"><div><p class="eyebrow">Mechanical Architecture</p><h2>Gear train and component layout</h2></div></div><div class="spec-grid">
+  <div><strong>Gear Type</strong><span>Spur gears for simple, efficient parallel-axis power transfer.</span></div>
+  <div><strong>Reduction</strong><span>Two 4:1 gear stages combined into a total 16:1 speed reduction.</span></div>
+  <div><strong>Housing</strong><span>Single-piece 3D printed frame with open top and bottom sections.</span></div>
+  <div><strong>Shaft Interface</strong><span>Hexagonal gear-mounting sections with circular bearing/contact sections.</span></div>
+</div></section>
+
+<section class="section feature"><div><p class="eyebrow">Assembly Logic</p><h2>Designed to be easy to assemble and repair.</h2><p>The assembly sequence was documented using annotated CAD views. The large and small gears are placed in paired compartments, the large shaft is inserted through the first gear pair, and small shafts are installed from each side to complete the second stage.</p><p>Modular shafts and sleeves were emphasized because 3D-printed shaft components are more likely to wear or break during assembly and operation. Keeping these parts replaceable makes the design easier to maintain.</p><div class="actions"><a class="btn" href="../docs/Parallel_Gearbox_Assembly_Instructions.pdf">Assembly Instructions PDF</a><a class="btn" href="../docs/Parallel_Gearbox_Design_Rationale.pdf">Design Rationale PDF</a></div></div><img src="../assets/projects/parallel-gearbox/assembly-step-3.png" alt="Parallel gearbox assembly step showing shaft and gear insertion"></section>
+
+<section class="section"><div class="section-title"><div><p class="eyebrow">Bill of Materials</p><h2>Main printed components</h2></div></div><div class="table-wrap"><table><thead><tr><th>Component</th><th>Quantity</th><th>Purpose</th></tr></thead><tbody><tr><td>Gearbox Frame</td><td>1</td><td>Single-piece housing that supports the gear train and shaft alignment.</td></tr><tr><td>Large Gear</td><td>2</td><td>Used in the two reduction stages to provide the 4:1 gear ratio per stage.</td></tr><tr><td>Small Gear</td><td>2</td><td>Meshes with the large gears to transfer motion through the parallel gearbox.</td></tr><tr><td>Large Shaft</td><td>1</td><td>Primary shaft running through the gearbox to support motion transfer.</td></tr><tr><td>Small Shaft</td><td>2</td><td>Side shafts used to support the gear pairs and complete the assembly.</td></tr></tbody></table></div></section>
+
+<section class="section feature"><div><p class="eyebrow">Engineering Trade-Offs</p><h2>Practical decisions for 3D printing.</h2><ul><li><strong>Spur gears over complex gear types:</strong> simpler geometry reduced modeling and printing risk.</li><li><strong>Single-piece frame:</strong> improved rigidity but made full-frame replacement necessary if the housing failed.</li><li><strong>Open housing:</strong> reduced print time and made gear placement easier, while still supporting shaft alignment.</li><li><strong>Replaceable internals:</strong> gears, shafts, and sleeves could be reprinted independently if damaged.</li></ul></div><img src="../assets/projects/parallel-gearbox/top-view.png" alt="Top view of parallel gearbox gear train"></section>
+
+<section class="section"><div class="section-title"><div><p class="eyebrow">Skills Demonstrated</p><h2>What this project shows</h2></div></div><div class="skill-grid"><div><h3>SolidWorks CAD</h3><p>Modeled the frame, gears, shafts, and complete assembly for fit and motion.</p></div><div><h3>Gear Design</h3><p>Designed a two-stage spur-gear train with a total 16:1 speed reduction.</p></div><div><h3>3D Printing</h3><p>Considered print time, part strength, modularity, and replacement strategy.</p></div><div><h3>Documentation</h3><p>Created BOM and visual assembly instructions for repeatable assembly.</p></div></div></section>
+
+<section class="section"><div class="section-title"><div><p class="eyebrow">Gallery</p><h2>Prototype, CAD views, and assembly sequence</h2></div></div><div class="gallery">
+<figure class="gallery-item reveal"><img src="../assets/projects/parallel-gearbox/physical-prototype.png" alt="3D printed gearbox prototype"><figcaption>3D printed gearbox prototype</figcaption></figure>
+<figure class="gallery-item reveal"><img src="../assets/projects/parallel-gearbox/solidworks-iso.png" alt="SolidWorks gearbox isometric view"><figcaption>SolidWorks isometric assembly</figcaption></figure>
+<figure class="gallery-item reveal"><img src="../assets/projects/parallel-gearbox/top-view.png" alt="Top view of gearbox"><figcaption>Top view showing parallel gear train</figcaption></figure>
+<figure class="gallery-item reveal"><img src="../assets/projects/parallel-gearbox/assembly-step-1.png" alt="Gear placement assembly step"><figcaption>Assembly step 1: gear placement</figcaption></figure>
+<figure class="gallery-item reveal"><img src="../assets/projects/parallel-gearbox/assembly-step-2.png" alt="Shaft insertion assembly step"><figcaption>Assembly step 2: shaft insertion</figcaption></figure>
+<figure class="gallery-item reveal"><img src="../assets/projects/parallel-gearbox/assembly-step-3.png" alt="Final assembly instruction"><figcaption>Assembly step 3: paired gear/shaft installation</figcaption></figure>
+</div></section>
+</main><script src="../assets/js/script.js"></script></body></html>
